@@ -1,0 +1,237 @@
+[gd_scene load_steps=8 format=3 uid="uid://dtbdsagsy4is8"]
+
+[ext_resource type="Script" uid="uid://cjo7blbk3i6ht" path="res://scripts/play_script.gd" id="1_m1edv"]
+[ext_resource type="PackedScene" uid="uid://characvqqxtmu" path="res://scenes/cell_row_scene.tscn" id="2_wklqy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wklqy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kdvgv"]
+bg_color = Color(0.19293168, 0.18779776, 0.20474604, 1)
+border_width_left = 4
+border_width_top = 4
+border_color = Color(0.37599856, 0.008380454, 0.3765151, 1)
+corner_radius_top_left = 4
+corner_radius_bottom_right = 4
+shadow_color = Color(0.21568628, 0.21568628, 0.5254902, 0.6745098)
+shadow_size = 8
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wklqy"]
+bg_color = Color(0.23915008, 0.3000597, 0.2888515, 1)
+border_width_left = 2
+border_width_top = 3
+border_color = Color(0.48073012, 0.29174107, 0.504253, 1)
+corner_radius_top_left = 7
+corner_radius_bottom_right = 8
+shadow_color = Color(0.38039216, 0.49803922, 0.9882353, 0.44313726)
+shadow_size = 4
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_que2y"]
+bg_color = Color(0.3023453, 0.4396619, 0.639674, 1)
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.21575168, 0.34305322, 0.39352193, 1)
+corner_radius_top_left = 8
+corner_radius_bottom_right = 8
+shadow_color = Color(0.25277507, 0.56056553, 0.88128287, 0.6)
+shadow_size = 4
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="Theme" id="Theme_bx6jv"]
+Button/colors/font_hover_color = Color(0.73412484, 0.82447773, 1, 1)
+Button/colors/font_hover_pressed_color = Color(0.38464707, 3.9106234e-07, 1.6845763e-07, 1)
+Button/constants/outline_size = 4
+Button/styles/focus = SubResource("StyleBoxEmpty_wklqy")
+Button/styles/hover = SubResource("StyleBoxFlat_kdvgv")
+Button/styles/normal = SubResource("StyleBoxFlat_wklqy")
+Button/styles/pressed = SubResource("StyleBoxFlat_que2y")
+CheckBox/constants/check_v_offset = 0
+CheckBox/constants/outline_size = 0
+CheckButton/constants/check_v_offset = 0
+CheckButton/constants/outline_size = 0
+CodeEdit/constants/completion_lines = 0
+CodeEdit/constants/completion_max_width = 0
+CodeEdit/constants/completion_scroll_width = 0
+CodeEdit/constants/line_spacing = 0
+CodeEdit/constants/outline_size = 0
+ColorPicker/constants/center_slider_grabbers = 0
+ColorPicker/constants/h_width = 0
+ColorPicker/constants/label_width = 0
+ColorPicker/constants/margin = 0
+ColorPicker/constants/sv_height = 0
+ColorPicker/constants/sv_width = 0
+ColorPickerButton/constants/outline_size = 0
+FileDialog/constants/thumbnail_size = 0
+FoldableContainer/constants/outline_size = 0
+GraphEdit/constants/connection_hover_thickness = 0
+GraphEdit/constants/port_hotzone_inner_extent = 0
+GraphEdit/constants/port_hotzone_outer_extent = 0
+GraphFrameTitleLabel/constants/line_spacing = 0
+GraphFrameTitleLabel/constants/outline_size = 0
+GraphFrameTitleLabel/constants/shadow_offset_x = 0
+GraphFrameTitleLabel/constants/shadow_offset_y = 0
+GraphFrameTitleLabel/constants/shadow_outline_size = 0
+GraphNode/constants/port_h_offset = 0
+GraphNodeTitleLabel/constants/line_spacing = 0
+GraphNodeTitleLabel/constants/outline_size = 0
+GraphNodeTitleLabel/constants/shadow_offset_x = 0
+GraphNodeTitleLabel/constants/shadow_offset_y = 0
+GraphNodeTitleLabel/constants/shadow_outline_size = 0
+HSlider/constants/center_grabber = 0
+HSlider/constants/grabber_offset = 0
+HSlider/constants/tick_offset = 0
+HSplitContainer/constants/autohide = 0
+HSplitContainer/constants/minimum_grab_thickness = 0
+ItemList/constants/icon_margin = 0
+ItemList/constants/outline_size = 0
+Label/constants/line_spacing = 0
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 0
+Label/constants/shadow_offset_y = 0
+Label/constants/shadow_outline_size = 0
+LineEdit/constants/caret_width = 0
+LineEdit/constants/minimum_character_width = 0
+LineEdit/constants/outline_size = 0
+LinkButton/constants/outline_size = 0
+LinkButton/constants/underline_spacing = 0
+MarginContainer/constants/margin_bottom = 0
+MarginContainer/constants/margin_left = 0
+MarginContainer/constants/margin_right = 0
+MarginContainer/constants/margin_top = 0
+MenuBar/constants/outline_size = 0
+MenuButton/constants/outline_size = 0
+OptionButton/constants/arrow_margin = 0
+OptionButton/constants/modulate_arrow = 0
+OptionButton/constants/outline_size = 0
+PopupMenu/constants/icon_max_width = 0
+PopupMenu/constants/indent = 0
+PopupMenu/constants/item_end_padding = 0
+PopupMenu/constants/item_start_padding = 0
+PopupMenu/constants/outline_size = 0
+ProgressBar/constants/outline_size = 0
+RichTextLabel/constants/outline_size = 0
+RichTextLabel/constants/shadow_offset_x = 0
+RichTextLabel/constants/shadow_offset_y = 0
+RichTextLabel/constants/shadow_outline_size = 0
+RichTextLabel/constants/strikethrough_alpha = 0
+RichTextLabel/constants/text_highlight_h_padding = 0
+RichTextLabel/constants/text_highlight_v_padding = 0
+RichTextLabel/constants/underline_alpha = 0
+SpinBox/constants/buttons_width = 0
+SpinBox/constants/set_min_buttons_width_from_icons = 0
+SplitContainer/constants/autohide = 0
+SplitContainer/constants/minimum_grab_thickness = 0
+TabBar/constants/icon_max_width = 0
+TabBar/constants/outline_size = 0
+TabContainer/constants/icon_max_width = 0
+TabContainer/constants/outline_size = 0
+TabContainer/constants/side_margin = 0
+TextEdit/constants/caret_width = 0
+TextEdit/constants/line_spacing = 0
+TextEdit/constants/outline_size = 0
+TooltipLabel/constants/outline_size = 0
+TooltipLabel/constants/shadow_offset_x = 0
+TooltipLabel/constants/shadow_offset_y = 0
+Tree/constants/button_margin = 0
+Tree/constants/children_hl_line_width = 0
+Tree/constants/draw_guides = 0
+Tree/constants/draw_relationship_lines = 0
+Tree/constants/icon_max_width = 0
+Tree/constants/inner_item_margin_bottom = 0
+Tree/constants/inner_item_margin_left = 0
+Tree/constants/inner_item_margin_right = 0
+Tree/constants/inner_item_margin_top = 0
+Tree/constants/item_margin = 0
+Tree/constants/outline_size = 0
+Tree/constants/parent_hl_line_margin = 0
+Tree/constants/parent_hl_line_width = 0
+Tree/constants/relationship_line_width = 0
+Tree/constants/scroll_border = 0
+Tree/constants/scroll_speed = 0
+Tree/constants/scrollbar_margin_bottom = 0
+Tree/constants/scrollbar_margin_left = 0
+Tree/constants/scrollbar_margin_right = 0
+Tree/constants/scrollbar_margin_top = 0
+VBoxContainer/constants/separation = 8
+VSlider/constants/center_grabber = 0
+VSlider/constants/grabber_offset = 0
+VSlider/constants/tick_offset = 0
+VSplitContainer/constants/autohide = 0
+VSplitContainer/constants/minimum_grab_thickness = 0
+Window/constants/close_h_offset = 0
+Window/constants/close_v_offset = 0
+Window/constants/resize_margin = 0
+Window/constants/title_height = 0
+Window/constants/title_outline_size = 0
+
+[node name="GamePlayScene" type="Control"]
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_m1edv")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GameBoard" type="GridContainer" parent="CanvasLayer"]
+clip_contents = true
+custom_minimum_size = Vector2(32, 32)
+offset_right = 260.0
+offset_bottom = 260.0
+
+[node name="Row0" parent="CanvasLayer/GameBoard" instance=ExtResource("2_wklqy")]
+layout_mode = 2
+
+[node name="Row1" parent="CanvasLayer/GameBoard" instance=ExtResource("2_wklqy")]
+layout_mode = 2
+
+[node name="Row2" parent="CanvasLayer/GameBoard" instance=ExtResource("2_wklqy")]
+layout_mode = 2
+
+[node name="Row3" parent="CanvasLayer/GameBoard" instance=ExtResource("2_wklqy")]
+layout_mode = 2
+
+[node name="Row4" parent="CanvasLayer/GameBoard" instance=ExtResource("2_wklqy")]
+layout_mode = 2
+
+[node name="Row5" parent="CanvasLayer/GameBoard" instance=ExtResource("2_wklqy")]
+layout_mode = 2
+
+[node name="Row6" parent="CanvasLayer/GameBoard" instance=ExtResource("2_wklqy")]
+layout_mode = 2
+
+[node name="Row7" parent="CanvasLayer/GameBoard" instance=ExtResource("2_wklqy")]
+layout_mode = 2
+
+[node name="GameControls" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 552.0
+offset_top = 5.0
+offset_right = 853.0
+offset_bottom = 294.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_bx6jv")
+
+[node name="BtnSettings" type="Button" parent="CanvasLayer/GameControls"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Settings menu"
+
+[node name="BtnReturnToMenu" type="Button" parent="CanvasLayer/GameControls"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Return to main menu"
+
+[node name="BtnRestart" type="Button" parent="CanvasLayer/GameControls"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Restart round"
+
+[node name="BtnUndo" type="Button" parent="CanvasLayer/GameControls"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Undo last move"

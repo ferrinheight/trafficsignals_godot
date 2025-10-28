@@ -1,0 +1,56 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Traffic Signals"
+run/main_scene="uid://dtbdsagsy4is8"
+config/features=PackedStringArray("4.5", "GL Compatibility")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
+config/icon="res://assets/godot_icon.svg"
+
+[audio]
+
+buses/default_bus_layout=""
+
+[debug]
+
+gdscript/warnings/shadowed_variable_base_class=2
+gdscript/warnings/shadowed_global_identifier=2
+gdscript/warnings/untyped_declaration=2
+gdscript/warnings/empty_file=0
+
+[editor_plugins]
+
+enabled=PackedStringArray()
+
+[loggie]
+
+general/show_system_specs=false
+general/show_loggie_specs=0
+timestamps/output_timestamps=true
+formats/timestamp="[{hour}:{minute}:{second}]"
+formats/info_message="[b][color=green][INFO]:[/color][/b] {msg}"
+general/log_level=4
+
+[physics]
+
+common/physics_jitter_fix=0.0
+common/physics_interpolation=true
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_s3tc_bptc=true
+textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+anti_aliasing/quality/screen_space_aa=1

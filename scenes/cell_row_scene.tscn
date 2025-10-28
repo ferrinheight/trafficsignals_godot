@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://characvqqxtmu"]
+
+[ext_resource type="Script" uid="uid://d33atmywr8snj" path="res://scripts/cell_row_script.gd" id="1_6vubr"]
+[ext_resource type="PackedScene" uid="uid://bfs2l0uaqabsi" path="res://scenes/cell_node_scene.tscn" id="2_6vubr"]
+
+[node name="Row" type="HBoxContainer"]
+custom_minimum_size = Vector2(512, 64)
+offset_right = 540.0
+offset_bottom = 64.0
+mouse_filter = 2
+mouse_behavior_recursive = 2
+alignment = 1
+script = ExtResource("1_6vubr")
+
+[node name="Cell0" parent="." instance=ExtResource("2_6vubr")]
+layout_mode = 2
+
+[node name="Cell1" parent="." instance=ExtResource("2_6vubr")]
+layout_mode = 2
+
+[node name="Cell2" parent="." instance=ExtResource("2_6vubr")]
+layout_mode = 2
+
+[node name="Cell3" parent="." instance=ExtResource("2_6vubr")]
+layout_mode = 2
+
+[node name="Cell4" parent="." instance=ExtResource("2_6vubr")]
+layout_mode = 2
+
+[node name="Cell5" parent="." instance=ExtResource("2_6vubr")]
+layout_mode = 2
+
+[node name="Cell6" parent="." instance=ExtResource("2_6vubr")]
+layout_mode = 2
+
+[node name="Cell7" parent="." instance=ExtResource("2_6vubr")]
+layout_mode = 2

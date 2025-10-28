@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfs2l0uaqabsi"]
+
+[ext_resource type="Script" uid="uid://dgoymwg46rgjp" path="res://scripts/cell_node_script.gd" id="1_rlngi"]
+
+[node name="Cell" type="PanelContainer"]
+offset_right = 64.0
+offset_bottom = 64.0
+mouse_behavior_recursive = 2
+script = ExtResource("1_rlngi")
+
+[node name="Outline" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+mouse_filter = 1
+mouse_behavior_recursive = 2
+color = Color(0.74509805, 0.74509805, 0.74509805, 1)
+
+[node name="Center" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(56, 56)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+mouse_behavior_recursive = 2
+mouse_default_cursor_shape = 2
+color = Color(1, 0, 1, 1)
