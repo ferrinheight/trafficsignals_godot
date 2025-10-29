@@ -41,12 +41,14 @@
   - Construction Zones may be fixed(becoming a green) via a power up.
 ##### **Completion rule:**
 - To complete and win a board the following 2 conditions must be satisfied;
-  - There must be at least one `contiguos path`[^1]. of greens connecting the designated cell in `row 1`[^2]. to the designated cell in `row 8`[^2].  
+  - There must be at least one contiguos path[^1]. of greens connecting the designated cell in row 1[^2]. to the designated cell in row 8[^2].  
   - All final cell arrangement rules are satisfied(see above).
 
 ###### **Rule notes:*
-* [1]: contiguos path is one where cells are connected on cardinal sides ie diagonals do not count.
-* [2]: row 1 and row 8 are 0 and 7 respectively in code.
+[^1]: 
+* *[1]* contiguos path is one where cells are connected on cardinal sides ie diagonals do not count.
+[^2]: 
+* *[2]* row 1 and row 8 are 0 and 7 respectively in code.
 
 ---
 ---
