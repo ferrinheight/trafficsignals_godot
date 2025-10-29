@@ -7,14 +7,14 @@ extends PanelContainer
 # outline is used to higlight selected cells 
 @onready var cell_outline: ColorRect = $Outline
 # center is colored per the cells type; green, yellow or red
-@onready var cell_center: ColorRect = $Center
-# color settings for outline and center nodes ^
+@onready var cell_center: TextureRect = $Center
+# color setting for outline and center node texture
 var _my_outline_color: Color = Color.GRAY
-var _my_center_color: Color = Color.FUCHSIA
+var _my_center_texture: String = "res://assets/signal_green.png"
 var _my_row: int = -1
 var _my_column: int = -1
 # a single character string representing the cells type/color; "g"reen, "y"ellow or "r"ed
-var _my_cell_type: String = ""
+var _my_cell_type: String = "g"
 var _my_selected_status: bool = false
 
 signal cell_clicked(cell: GameboardCell)
@@ -24,12 +24,12 @@ func _ready() -> void:
 	if cell_outline:
 		_set_my_outline()
 	if cell_center:
-		_set_my_color()
+		_set_my_texture()
 
 # set this cells center color
-func _set_my_color() -> void:
+func _set_my_texture() -> void:
 	if cell_center:
-		cell_center.color = _my_center_color
+		cell_center.texture = load(_my_center_texture)
 	
 # set this cells outline color when highlighted, reset otherwise
 func _set_my_outline() -> void:
@@ -54,13 +54,13 @@ func init_cell(row: int, column: int, cell_type: String) -> void:
 	_my_row = row
 	_my_column = column
 	set_cell_type(cell_type)
-	_set_my_color()
+	_set_my_texture()
 	_set_my_outline()
 
 ### public functions ###
 # get this cell's coords on the gameboard
-func get_cell_coords() -> Vector2:
-	return Vector2(_my_column, _my_row)
+func get_cell_coords() -> Vector2i:
+	return Vector2i(_my_column, _my_row)
 
 # set this cells type; "g"reen, "y"ellow or "r"ed. defaults to "g"reen
 func set_cell_type(cell_type: String = "g") -> void:
@@ -68,15 +68,15 @@ func set_cell_type(cell_type: String = "g") -> void:
 	if _my_cell_type not in ["g", "y", "r"]:
 		_my_cell_type = "g"
 	if _my_cell_type == "g":
-		_my_center_color = Color.WEB_GREEN
-		_my_outline_color = Color.GREEN
+		_my_center_texture = "res://assets/signal_green.png"
+		_my_outline_color = Color.DARK_GREEN
 	elif _my_cell_type == "y":
-		_my_center_color = Color.GOLD
-		_my_outline_color = Color.YELLOW
+		_my_center_texture = "res://assets/signal_yellow.png"
+		_my_outline_color = Color(0.823, 0.823, 0.0, 0.69)
 	elif _my_cell_type == "r":
-		_my_center_color = Color.FIREBRICK
-		_my_outline_color = Color.RED
-	_set_my_color()
+		_my_center_texture = "res://assets/signal_red.png"
+		_my_outline_color = Color.WEB_MAROON
+	_set_my_texture()
 
 # get this cells "type" aka color indicator string
 func get_cell_type() -> String:

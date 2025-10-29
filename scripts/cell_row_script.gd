@@ -18,10 +18,8 @@ func _ready() -> void:
 				_debug_child.connect("cell_clicked", Callable(self, "_debug_on_cell_clicked").bind(_debug_child))
 
 func _debug_contiguos_cells(_debug_cella: GameboardCell, _debug_cellb: GameboardCell) -> bool:
-	var _debug_diff: Vector2 = _debug_cella.get_cell_coords() - _debug_cellb.get_cell_coords()
-	if abs(_debug_diff.x) == 1 and _debug_diff.y == 0:
-		return true
-	if abs(_debug_diff.y) == 1 and _debug_diff.x == 0:
+	var _debug_diff: int = _debug_cella.get_cell_coords().x - _debug_cellb.get_cell_coords().x
+	if abs(_debug_diff) == 1:
 		return true
 	return false
 	
